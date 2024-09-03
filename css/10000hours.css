@@ -64,7 +64,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: calc(100% - 2rem);
+  max-width: calc(100% - 6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,7 +105,25 @@ main p {
   line-height: 2.4rem;
 }
 .expert_text {
+  width: 100%;
   margin-bottom: 10.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expert_text .quoetes_start {
+  width: 4.6rem;
+  height: 2rem;
+  background-image: url(/the-10000-hour-rule/img/quotes.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.expert_text .quoetes_end {
+  width: 4.6rem;
+  height: 2rem;
+  background-image: url(/the-10000-hour-rule/img/quotes.png);
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 main p strong {
@@ -136,15 +154,18 @@ input::placeholder {
 }
 .how_pratice {
   margin-bottom: 14.7rem;
+  position: relative;
 }
 
-.how_pratice::before {
+.how_pratice::after {
   content: "";
-  width: 4rem;
-  height: 5rem;
+  width: 6.4rem;
+  height: 7.2rem;
   background-image: url(/the-10000-hour-rule/img/click.png);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  position: absolute;
+  left: 59rem;
 }
 
 .bt {
@@ -197,4 +218,7 @@ footer p {
   line-height: 1.7rem;
   text-align: center;
   margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
 }
