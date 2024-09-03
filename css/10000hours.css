@@ -1,29 +1,200 @@
 @font-face {
-    font-family: 'OTEnjoystoriesBA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
+:root {
+  --main--color: #5b2386;
+  --body--color: #f5df4d;
+}
+/* 화면에 안보이게 하되 스크린리더에는 읽히게하는 속성 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--main--color);
+  font-family: "GmarketSansMedium";
+  font-size: 16px;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 19.9rem 0 7rem 0;
+}
+.header img {
+  width: 56.4rem;
+  height: 11.2rem;
+  z-index: 10;
+  position: relative;
+}
+header::after {
+  content: "";
+  background-image: url(/the-10000-hour-rule/img/clock.png);
+  width: 22.1rem;
+  height: 22.5rem;
+  display: block;
+  background-size: cover;
+  position: absolute;
+  transform: translatex(24rem) translateY(-18rem);
+  z-index: 0;
+}
+
+main h2 {
+  font-family: "OTEnjoystoriesBA";
+  color: var(--body--color);
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 3.96rem;
+  margin: 12.5rem 0 7.8rem 0;
+}
+
+main p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.expert_text {
+  margin-bottom: 10.2rem;
+}
+
+main p strong {
+  font-family: "GmarketSansMedium";
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+input {
+  width: 22.8rem;
+  height: 5.7rem;
+  border-radius: 0.7rem;
+}
+
+input::placeholder {
+  font-family: "GmarketSansMedium";
+  color: #babcbe;
+  font-size: 2.4em;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+.expert p:first-child {
+  margin-bottom: 2.7rem;
+}
+.expert p:nth-child(2) {
+  margin-bottom: 11.5rem;
+}
+.how_pratice {
+  margin-bottom: 14.7rem;
+}
+
+.how_pratice::before {
+  content: "";
+  width: 4rem;
+  height: 5rem;
+  background-image: url(/the-10000-hour-rule/img/click.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.bt {
+  font-family: "GmarketSansMedium";
+  padding: 2.1rem 4.9rem 2.1rem 4.9rem;
+  background-color: var(--body--color);
+  color: var(--main--color);
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5.6rem;
+}
+
+.practice p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+.practice p:first-child {
+  margin-bottom: 2.7rem;
+}
+
+.practice p strong {
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+  margin: 1.2rem;
+}
+
+.share {
+  background-color: white;
+  margin-left: 1.8rem;
+  margin-top: 12.7rem;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  margin-top: 13rem;
+  width: 12.5rem;
+}
+footer p {
+  font-family: "Noto Sans KR";
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: center;
+  margin-top: 2rem;
 }
