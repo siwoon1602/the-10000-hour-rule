@@ -236,6 +236,9 @@ footer p {
 .modal_box p {
   font-size: 3.6rem;
 }
+.modal_box .bt {
+  margin-top: 3.4rem;
+}
 
 /* modal 종료 */
 
@@ -323,5 +326,9 @@ footer p {
   }
   .modal_box p {
     font-size: 3.6rem;
+  }
+
+  .modal_box .bt {
+    margin-top: 7.4rem;
   }
 }
