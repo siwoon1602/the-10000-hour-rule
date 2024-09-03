@@ -116,14 +116,14 @@ main p {
 .expert_text .quoetes_start {
   width: 4.6rem;
   height: 3rem;
-  background-image: url(/the-10000-hour-rule/img/quotes.png);
+  background-image: url(/img/quotes.png);
   background-position: left;
   background-repeat: no-repeat;
 }
 .expert_text .quoetes_end {
   width: 4.6rem;
   height: 2rem;
-  background-image: url(/the-10000-hour-rule/img/quotes.png);
+  background-image: url(/img/quotes.png);
   background-position: right;
   background-repeat: no-repeat;
 }
@@ -164,7 +164,7 @@ input::placeholder {
   content: "";
   width: 6.4rem;
   height: 7.2rem;
-  background-image: url(/the-10000-hour-rule/img/click.png);
+  background-image: url(/img/click.png);
   background-size: contain;
   background-position: center;
   position: absolute;
@@ -253,6 +253,12 @@ footer p {
     display: block;
     margin-bottom: 5rem;
   }
+  .bt .how_pratice span {
+    display: block;
+  }
+  .expert_text p {
+    font-size: 3.1vw;
+  }
   .practice p {
     font-size: 6.3vw;
   }
@@ -270,6 +276,11 @@ footer p {
 }
 
 /* 메인 페이지 스타일 끝*/
+@media (max-width: 767px) {
+  .container {
+    width: 720px;
+  }
+}
 
 /* 모달 스타일 시작 */
 
