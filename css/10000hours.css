@@ -56,85 +56,94 @@ html {
 }
 
 body {
-  font-family: "GmarketSansMedium";
-  font-size: 16px;
-  color: #fff;
   background-color: var(--main--color);
+  font-family: "GmarketSansMedium";
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .container {
-  width: 192rem;
-  max-width: calc(100% - 6rem);
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 17rem 0 7rem 0;
+  padding: 4.1rem;
+}
+
+button {
+  padding: 2rem 4.9rem 2.1rem 4.9rem;
+  background-color: var(--body--color);
+  border-radius: 1.3rem;
+  color: var(--main--color);
+  font-family: "GmarketSansBold";
+  font-size: 1.4rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 header {
   position: relative;
-}
-header img {
-  width: 52.9rem;
-  height: auto;
-  max-width: 100%;
-  position: relative;
-}
-/* 메인로고 뒤편 시계 */
-header .main_logo::after {
-  content: "";
-  width: 100%;
-  background-image: url(/the-10000-hour-rule/img/click.png);
-  background-size: contain;
-  background-position: center;
-  position: absolute;
+  white-space: nowrap;
 }
 
+header .main_logo {
+  width: 26.7rem;
+  margin-bottom: 6.9rem;
+  z-index: 3;
+}
+.clock {
+  width: 10.6rem;
+  position: absolute;
+  transform: translatex(-20rem) translateY(-1.7rem);
+}
 main h2 {
   font-family: "OTEnjoystoriesBA";
   color: var(--body--color);
-  font-size: 3.6rem;
-  font-weight: 700;
-  line-height: 3.96rem;
-  margin: 12.5rem 0 7.8rem 0;
+  margin-bottom: 6.2rem;
+  font-size: 2.2rem;
 }
 
-main p {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
 .expert_text {
-  margin-bottom: 10.2rem;
+  margin-bottom: 6.2rem;
   position: relative;
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.expert_text .quoetes_start {
-  width: 4.6rem;
-  height: 3rem;
-  background-image: url(/img/quotes.png);
-  background-position: left;
-  background-repeat: no-repeat;
-}
-.expert_text .quoetes_end {
-  width: 4.6rem;
-  height: 2rem;
-  background-image: url(/img/quotes.png);
-  background-position: right;
-  background-repeat: no-repeat;
+.expert_text p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-align: center;
 }
 
-main p strong {
+.expert_text strong {
   font-family: "GmarketSansBold";
-  font-size: 2.4rem;
-  line-height: 2.4rem;
 }
+
+.expert_text::before,
+.expert_text::after {
+  display: inline;
+  align-items: center;
+  font-family: "GmarketSansBold";
+  font-size: 4.8rem;
+  position: absolute;
+  background-origin: 0.4rem;
+  height: 4.8rem;
+  color: #fcee21;
+  opacity: 30%;
+}
+.expert_text::before {
+  content: "“";
+  left: 0;
+}
+.expert_text::after {
+  content: "”";
+  right: 0;
+}
+
 input {
-  padding: 1.7rem 4.1rem;
+  padding: 1.2rem 3.5rem;
   border-radius: 0.7rem;
   border: 0;
   margin: 0 1.7rem;
@@ -143,184 +152,176 @@ input {
 input::placeholder {
   font-family: "GmarketSansMedium";
   color: #babcbe;
-  font-size: 2.4em;
-  font-weight: 400;
+  font-size: 1.4em;
   text-align: center;
-  line-height: 2.4rem;
+}
+.expert {
+  font-size: 1.4rem;
+}
+.expert_input_01 {
+  margin-bottom: 1.7rem;
+  display: block;
 }
 
-.expert p:first-child {
-  margin-bottom: 2.7rem;
-}
-.expert p:nth-child(2) {
-  margin-bottom: 11.5rem;
-}
 .how_pratice {
-  margin: 0 auto 14.7rem;
+  margin: 4.9rem 0 6.4rem;
   position: relative;
 }
-
 .how_pratice::after {
   content: "";
-  width: 6.4rem;
-  height: 7.2rem;
+  width: 2.7em;
+  height: 3.5em;
   background-image: url(/img/click.png);
   background-size: contain;
   background-position: center;
   position: absolute;
-  left: 100%;
+  left: 27rem;
+}
+.pratice_text {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.bt {
+.pratice_text strong {
   font-family: "GmarketSansBold";
-  padding: 2.1rem 4.9rem 2.1rem 4.9rem;
-  background-color: var(--body--color);
-  color: var(--main--color);
   font-size: 2.4rem;
-  line-height: 2.4rem;
-  text-align: center;
-  font-weight: 700;
+  margin: 0 0.8rem;
+}
+.bt_go,
+.bt_share {
   border-radius: 5.6rem;
-  border: 0;
-  display: block;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.3rem 1.7rem;
+  margin: 5.5rem 0 8.3rem;
 }
-.practice {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.bt_share {
+  background-color: #fff;
+  margin-left: 1.3rem;
 }
-.practice p {
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-}
-.practice p:first-child {
-  margin-bottom: 2.7rem;
-}
-
-.practice p strong {
-  font-family: "GmarketSansBold";
-  font-weight: 700;
-  font-size: 7.2rem;
-  line-height: 7.2rem;
-  margin: 1.2rem;
-}
-
-.button_area {
-  margin-top: 12.7rem;
-  display: flex;
-  gap: 1.8rem;
-}
-.share {
-  background-color: white;
-}
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* footer  시작 */
 footer img {
-  margin-top: 13rem;
-  width: 12.5rem;
+  width: 9.1rem;
+  margin-bottom: 1.7rem;
 }
+
 footer p {
   font-family: "Noto Sans KR";
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  opacity: 70%;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
   text-align: center;
-  margin-top: 2rem;
-  font-weight: 400;
 }
-.break {
-  display: none;
-}
+/* footer 종료 */
 
-@media (max-width: 767px) {
-  .container {
-    padding: 17rem 0 7rem 0;
-  }
-  header img {
-    width: 85.3vw;
-  }
-  main h2 {
-    white-space: nowrap;
-    font-size: 6.3vw;
-  }
-  .break {
-    display: block;
-    margin-bottom: 5rem;
-  }
-  .bt .how_pratice span {
-    display: block;
-  }
-  .expert_text p {
-    font-size: 3.1vw;
-  }
-  .practice p {
-    font-size: 6.3vw;
-  }
-
-  .break {
-    display: inline-block;
-  }
-
-  .bt {
-    padding: 1.3rem 1.7rem;
-  }
-  .input {
-    margin: 0 0.4rem;
-  }
-}
-
-/* 메인 페이지 스타일 끝*/
-@media (max-width: 767px) {
-  .container {
-    width: 720px;
-  }
-}
-
-/* 모달 스타일 시작 */
-
+/* modal 시작 */
 .modal_box {
-  width: 100%;
-  padding: 7.6rem 13rem 7.6rem;
+  padding: 4rem 4.5rem;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  font-family: "OTEnjoystoriesBA";
-  background-color: #fff;
+  justify-content: center;
+  color: var(--main--color);
   border-radius: 3rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  /* 안보이게 처리 */
-  display: none;
-  /* 안보이게 처리 */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
 
+.modal_box h3,
+.modal_box p {
+  font-family: "OTEnjoystoriesBA";
+}
 .modal_box h3 {
-  color: var(--main--color);
-  font-size: 9.6rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 10.5rem;
+  font-size: 6.4rem;
 }
 .modal_box p {
-  color: var(--main--color);
   font-size: 3.6rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 3rem;
 }
 
-.modal_box img {
-  width: 34.3;
-  height: 29.3;
-  margin-bottom: 7rem;
+/* modal 종료 */
+
+@media (min-width: 767px) {
+  .container {
+    max-width: calc(100% - 10rem);
+  }
+
+  header .main_logo {
+    width: 52rem;
+  }
+  main h2 {
+    font-size: 3.6rem;
+  }
+
+  .clock {
+    width: 22.1rem;
+    position: absolute;
+    transform: translatex(-38rem) translateY(-5.7rem);
+  }
+  .expert_text {
+    margin-bottom: 6.2rem;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .expert_text strong {
+    font-size: 2.4rem;
+  }
+
+  .expert_text p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+  }
+  .break {
+    display: none;
+  }
+
+  button {
+    padding: 2rem 4.9rem 2.1rem 4.9rem;
+    border-radius: 5.6rem;
+    font-size: 2.4rem;
+  }
+
+  .how_pratice::after {
+    left: 100%;
+  }
+
+  .pratice_text {
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .pratice_text strong {
+    font-family: "GmarketSansBold";
+    font-size: 7.2rem;
+    margin: 0 0.8rem;
+  }
+
+  .modal_box {
+    padding: 7.6rem 14.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: var(--main--color);
+    border-radius: 3rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
+
+  .modal_box h3,
+  .modal_box p {
+    font-family: "OTEnjoystoriesBA";
+  }
+  .modal_box h3 {
+    font-size: 9.6rem;
+  }
+  .modal_box h3::after {
+    content: "♥♥♥";
+    font-size: 9.6rem;
+    font-family: "OTEnjoystoriesBA";
+  }
+  .modal_box p {
+    font-size: 3.6rem;
+  }
 }
-.modal_box .bt {
-  margin-bottom: 7.3rem;
-  padding: 2.1rem 4.9rem;
-}
-/* 모달 스타일 종료 */
