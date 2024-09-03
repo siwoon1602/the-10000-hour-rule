@@ -76,6 +76,8 @@ body {
   width: 56.4rem;
   height: 11.2rem;
   z-index: 10;
+  flex-basis: 3rem;
+  max-width: 100%;
 }
 /* 메인로고 뒤편 시계 */
 header::after {
@@ -155,7 +157,7 @@ input::placeholder {
   margin-bottom: 11.5rem;
 }
 .how_pratice {
-  margin-bottom: 14.7rem;
+  margin: 0 auto 14.7rem;
   position: relative;
 }
 
@@ -181,8 +183,14 @@ input::placeholder {
   font-weight: 700;
   border-radius: 5.6rem;
   border: 0;
+  display: block;
 }
-
+.practice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .practice p {
   font-weight: 400;
   font-size: 2.4rem;
@@ -200,10 +208,13 @@ input::placeholder {
   margin: 1.2rem;
 }
 
+.button_area {
+  margin-top: 12.7rem;
+  display: flex;
+  gap: 1.8rem;
+}
 .share {
   background-color: white;
-  margin-left: 1.8rem;
-  margin-top: 12.7rem;
 }
 footer {
   display: flex;
