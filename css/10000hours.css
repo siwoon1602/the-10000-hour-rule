@@ -56,7 +56,6 @@ html {
 }
 
 body {
-  width: 100%;
   font-family: "GmarketSansMedium";
   font-size: 16px;
   color: #fff;
@@ -64,8 +63,10 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 192rem;
+  max-width: calc(100% - 6rem);
   display: flex;
+  margin: auto;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -81,6 +82,15 @@ header img {
   position: relative;
 }
 /* 메인로고 뒤편 시계 */
+header .main_logo::after {
+  content: "";
+  width: 100%;
+  background-image: url(/the-10000-hour-rule/img/click.png);
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+}
+
 main h2 {
   font-family: "OTEnjoystoriesBA";
   color: var(--body--color);
@@ -127,6 +137,7 @@ input {
   padding: 1.7rem 4.1rem;
   border-radius: 0.7rem;
   border: 0;
+  margin: 0 1.7rem;
 }
 
 input::placeholder {
@@ -157,7 +168,7 @@ input::placeholder {
   background-size: contain;
   background-position: center;
   position: absolute;
-  left: 59rem;
+  left: 100%;
 }
 
 .bt {
@@ -228,6 +239,9 @@ footer p {
 }
 
 @media (max-width: 767px) {
+  .container {
+    padding: 17rem 0 7rem 0;
+  }
   header img {
     width: 85.3vw;
   }
@@ -237,17 +251,21 @@ footer p {
   }
   .break {
     display: block;
+    margin-bottom: 5rem;
   }
-  .practice p strong {
-    font-family: "GmarketSansBold";
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 7.2rem;
-    margin: 1.2rem;
+  .practice p {
+    font-size: 6.3vw;
   }
 
   .break {
     display: inline-block;
+  }
+
+  .bt {
+    padding: 1.3rem 1.7rem;
+  }
+  .input {
+    margin: 0 0.4rem;
   }
 }
 
@@ -256,8 +274,7 @@ footer p {
 /* 모달 스타일 시작 */
 
 .modal_box {
-  width: 80rem;
-  height: 80rem;
+  width: 100%;
   padding: 7.6rem 13rem 7.6rem;
   display: flex;
   flex-direction: column;
