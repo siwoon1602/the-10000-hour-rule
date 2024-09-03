@@ -76,8 +76,8 @@ body {
   width: 56.4rem;
   height: 11.2rem;
   z-index: 10;
-  position: relative;
 }
+/* 메인로고 뒤편 시계 */
 header::after {
   content: "";
   background-image: url(/the-10000-hour-rule/img/clock.png);
@@ -111,7 +111,6 @@ main p {
   display: flex;
   text-align: center;
   justify-content: center;
-  vertical-align: top;
 }
 
 .expert_text .quoetes_start {
@@ -130,7 +129,7 @@ main p {
 }
 
 main p strong {
-  font-family: "GmarketSansMedium";
+  font-family: "GmarketSansBold";
   font-size: 2.4rem;
   line-height: 2.4rem;
 }
@@ -181,6 +180,7 @@ input::placeholder {
   text-align: center;
   font-weight: 700;
   border-radius: 5.6rem;
+  border: 0;
 }
 
 .practice p {
@@ -193,7 +193,7 @@ input::placeholder {
 }
 
 .practice p strong {
-  font-family: "GmarketSansMedium";
+  font-family: "GmarketSansBold";
   font-weight: 700;
   font-size: 7.2rem;
   line-height: 7.2rem;
@@ -225,3 +225,50 @@ footer p {
 
 @media (max-width: 767px) {
 }
+
+/* 메인 페이지 스타일 끝*/
+
+/* 모달 스타일 시작 */
+
+.modal_box {
+  width: 80rem;
+  height: 80rem;
+  padding: 7.6rem 13rem 7.6rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: "OTEnjoystoriesBA";
+  background-color: #fff;
+  border-radius: 3rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  /* 안보이게 처리 */
+  display: none;
+  /* 안보이게 처리 */
+}
+
+.modal_box h3 {
+  color: var(--main--color);
+  font-size: 9.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 10.5rem;
+}
+.modal_box p {
+  color: var(--main--color);
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.modal_box img {
+  width: 34.3;
+  height: 29.3;
+  margin-bottom: 7rem;
+}
+.modal_box .bt {
+  margin-bottom: 7.3rem;
+  padding: 2.1rem 4.9rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/* 모달 스타일 종료 */
