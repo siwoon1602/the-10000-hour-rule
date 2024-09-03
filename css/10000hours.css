@@ -70,13 +70,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 19.9rem 0 7rem 0;
+  padding: 19.9rem 2rem 7rem;
 }
-.header img {
-  width: 56.4rem;
-  height: 11.2rem;
-  z-index: 10;
-  flex-basis: 3rem;
+header img {
+  width: 52.9rem;
+  height: auto;
   max-width: 100%;
 }
 /* 메인로고 뒤편 시계 */
@@ -85,10 +83,11 @@ header::after {
   background-image: url(/the-10000-hour-rule/img/clock.png);
   width: 22.1rem;
   height: 22.5rem;
+  max-width: 100%;
   display: block;
   background-size: cover;
   position: absolute;
-  transform: translatex(24rem) translateY(-18rem);
+  transform: translatex(14rem) translateY(-17rem);
   z-index: 0;
 }
 
@@ -139,6 +138,7 @@ input {
   width: 22.8rem;
   height: 5.7rem;
   border-radius: 0.7rem;
+  border: 0;
 }
 
 input::placeholder {
@@ -184,6 +184,7 @@ input::placeholder {
   border-radius: 5.6rem;
   border: 0;
   display: block;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .practice {
   display: flex;
@@ -232,9 +233,23 @@ footer p {
   line-height: 1.7rem;
   text-align: center;
   margin-top: 2rem;
+  font-weight: 400;
 }
 
 @media (max-width: 767px) {
+  header img {
+    width: 26.9rem;
+    height: auto;
+    max-width: 100%;
+  }
+  main h2 {
+    font-family: "OTEnjoystoriesBA";
+    color: var(--body--color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 3.96rem;
+    margin: 12.5rem 0 7.8rem 0;
+  }
 }
 
 /* 메인 페이지 스타일 끝*/
@@ -280,6 +295,5 @@ footer p {
 .modal_box .bt {
   margin-bottom: 7.3rem;
   padding: 2.1rem 4.9rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 /* 모달 스타일 종료 */
