@@ -245,6 +245,7 @@ footer p {
 @media (min-width: 767px) {
   .container {
     max-width: calc(100% - 10rem);
+    padding-top: 12rem;
   }
 
   header .main_logo {
