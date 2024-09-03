@@ -161,6 +161,7 @@ input::placeholder {
 .expert_input_01 {
   margin-bottom: 1.7rem;
   display: block;
+  white-space: nowrap;
 }
 
 .how_pratice {
