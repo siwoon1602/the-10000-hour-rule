@@ -87,7 +87,7 @@ header {
 }
 
 header .main_logo {
-  width: 26.7rem;
+  width: 26.7em;
   margin-bottom: 6.9rem;
   z-index: 3;
 }
@@ -225,6 +225,7 @@ footer p {
   color: var(--main--color);
   border-radius: 3rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  margin: auto;
 }
 
 .modal_box h3,
